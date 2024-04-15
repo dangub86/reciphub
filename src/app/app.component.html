@@ -332,5 +332,15 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<!-- Side Menu -->
+<div style="float: left; width: 200px; height: 100vh; background: #f8f9fa;">
+  <ul style="list-style-type: none; padding: 0;">
+    <li><a routerLink="/browse">Browse</a></li>
+    <li><a routerLink="/about">About</a></li>
+  </ul>
+</div>
 
-<router-outlet />
+<!-- Main Content Area -->
+<div style="margin-left: 200px; padding: 1rem;">
+  <router-outlet></router-outlet>
+</div>
