@@ -177,7 +177,7 @@
   }
 </style>
 
-<main class="main">
+<!-- <main class="main">
   <div class="content">
     <div class="left-side">
       <svg
@@ -322,7 +322,8 @@
       </div>
     </div>
   </div>
-</main>
+
+</main> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -333,14 +334,64 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- Side Menu -->
-<div style="float: left; width: 200px; height: 100vh; background: #f8f9fa;">
+<!-- <div style="float: left; width: 200px; height: 100vh; background: #f8f9fa;">
   <ul style="list-style-type: none; padding: 0;">
     <li><a routerLink="/browse">Browse</a></li>
     <li><a routerLink="/about">About</a></li>
   </ul>
+</div> -->
+<div class="main">
+
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" (openedChange)="toggleState($event)" [(opened)]="isOpen">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/browse">Browse</a>
+      <a mat-list-item routerLink="/about">About</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon [class.rotate]="isOpen">menu</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- Add a Material icon button -->
+<button mat-fab color="primary" (click)="openRecipeModal()" class="fab-button">
+  <mat-icon>add</mat-icon>
+</button>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>We are passionate about providing the best recipes for home cooking.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Email: contact&#64;reciphub.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <a href="https://twitter.com/reciphub">Twitter</a>
+      <a href="https://facebook.com/reciphub">Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 RecipHub | All Rights Reserved
+  </div>
+</footer>
+
 </div>
+  
+
+
 
 <!-- Main Content Area -->
-<div style="margin-left: 200px; padding: 1rem;">
-  <router-outlet></router-outlet>
-</div>
+

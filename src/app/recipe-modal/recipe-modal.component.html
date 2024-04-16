@@ -1,0 +1,14 @@
+<!-- RecipeModalComponent.html -->
+<h2>Add a New Recipe</h2>
+<form [formGroup]="recipeForm" (ngSubmit)="submitRecipe()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <!-- Add other fields as needed -->
+  <button mat-button type="submit">Submit</button>
+</form>

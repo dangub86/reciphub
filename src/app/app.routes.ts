@@ -9,9 +9,10 @@ export const routes: Routes = [
   { path: '', redirectTo: '/browse', pathMatch: 'full' } // Redirect to 'browse' by default
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+//@NgModule({
+  //imports: [RouterModule.forRoot(routes)],
+  //exports: [RouterModule]
+//})
 
-export class AppRoutingModule { }
+//export class AppRoutingModule { }
+//export const AppRoutingModule = RouterModule.forRoot(routes);

@@ -1,0 +1,90 @@
+.example-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  mat-sidenav-container {
+    z-index: 1000;
+  }
+  
+  button.mat-icon-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
+  }
+
+  mat-icon {
+    transition: transform 1.3s ease; /* Apply transition to the icon universally */
+  }
+  
+  mat-icon.rotate {
+    transition: transform 0.7s ease; /* Apply transition to the rotate event */
+    transform: rotate(90deg); /* Only change the transform when class 'rotate' is applied */
+  }
+  
+
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    margin: 10px;
+  }
+  
+  .footer-section h4 {
+    color: #f7c08a; /* Light orange for headers */
+  }
+  
+  .footer-section p, .footer-section a {
+    color: #ccc; /* Lighter text for content */
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #777;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+  
+  .fab-button {
+    background-color: rgb(34, 134, 139);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;  /* Default is around 56px for standard FAB */
+    height: 56px;
+    border-radius: 50%; /* Maintain circular shape */
+    font-size: 28px; /* Adjusts the size of the icon inside the button */
+    z-index: 1000;
+  }
+
+
+  @media (max-width: 768px) {
+    .fab-button {
+      width: 46px;  /* Smaller on mobile devices */
+      height: 46px;
+      font-size: 20px; /* Smaller icon on mobile */
+    }
+  }
